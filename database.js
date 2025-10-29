@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 
-// MongoDB connection string
-const MONGODB_URI = 'mongodb+srv://starwindow170_db_user:54mrsYHshuJoZELR@cluster0.uzadgqo.mongodb.net/feedback_system?retryWrites=true&w=majority';
+// Load environment variables
+require('dotenv').config();
 
+// MongoDB connection string from environment variables
+const MONGODB_URI = process.env.MONGODB_URI;
 // Connect to MongoDB
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,

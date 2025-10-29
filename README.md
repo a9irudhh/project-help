@@ -51,16 +51,29 @@ A full-stack customer feedback management system with a customer-facing form and
 npm install
 ```
 
-### 2. MongoDB Configuration
+### 2. Environment Configuration
 
-The application is configured to use MongoDB Atlas with the following connection string:
+Create a `.env` file in the project root:
+
+```bash
+# Admin Credentials
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=admin123
+
+# MongoDB Connection
+MONGODB_URI=mongodb+srv://your_username:your_password@cluster.mongodb.net/feedback_system
+
+# Server Configuration
+PORT=3000
 ```
-mongodb+srv://starwindow170_db_user:54mrsYHshuJoZELR@cluster0.uzadgqo.mongodb.net/feedback_system
-```
 
-The database name is `feedback_system` and it will automatically create a `feedbacks` collection.
+**Note**: The `.env` file is already included in `.gitignore` to prevent committing sensitive data.
 
-### 3. Run the Application
+### 3. MongoDB Configuration
+
+The application uses the MongoDB connection string from the `.env` file. If not provided, it will fall back to the default connection string in the code.
+
+### 4. Run the Application
 
 ```bash
 npm start
@@ -71,16 +84,19 @@ For development with auto-restart:
 npm run dev
 ```
 
-### 4. Access the Application
+### 5. Access the Application
 
 - **Customer Feedback Form**: http://localhost:3000
 - **Admin Login**: http://localhost:3000/login
 - **Admin Dashboard**: http://localhost:3000/admin
 
-### 5. Admin Credentials
+### 6. Admin Credentials
 
+By default (as set in `.env`):
 - **Username**: `admin`
 - **Password**: `admin123`
+
+You can change these by modifying the `.env` file.
 
 ## API Endpoints
 

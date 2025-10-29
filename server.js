@@ -4,12 +4,15 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const { Feedback } = require('./database');
 
+// Load environment variables
+require('dotenv').config();
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Admin credentials (in production, use environment variables and hashed passwords)
-const ADMIN_USERNAME = 'admin';
-const ADMIN_PASSWORD = 'admin123';
+// Admin credentials from environment variables
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 // Simple token storage (in production, use JWT and proper session management)
 const activeSessions = new Set();
