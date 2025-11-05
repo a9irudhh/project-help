@@ -120,8 +120,8 @@ Get sentiment statistics (total, positive, negative counts)
 
 The `.env` file contains:
 ```
-MONGODB_URI=mongodb+srv://starwindow170_db_user:54mrsYHshuJoZELR@cluster0.uzadgqo.mongodb.net/feedback_system?retryWrites=true&w=majority
-GEMINI_API_KEY=AIzaSyCoSLDEY60A-TMDOyKVZtEaN5Gw04bvZbo
+MONGODB_URI=
+GEMINI_API_KEY=
 PORT=3000
 ```
 
